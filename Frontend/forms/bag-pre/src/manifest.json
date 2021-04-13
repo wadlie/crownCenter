@@ -1,0 +1,8 @@
+{
+  "id": "bag-pre",
+  "name": "Bag Pre",
+  "description": "Script for CROWN - Bag Pre",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

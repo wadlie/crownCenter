@@ -1,0 +1,25 @@
+Cron Documentation
+
+In order to setup cron:
+1. Install cron (possibly called cronie) package from respective package manager
+    a. apt
+    b. yum
+    c. pacman
+2. Start and enable the service through:
+    a. sudo systemctl start cronie
+    b. sudo systemctl enable cronie
+3. Locate the absolute path of the sensor parser script
+    a. ex. /home/crown/sensordata/parser.py
+4. Edit the cron job
+    a. Edit the list of jobs through 'crontab -e'
+    b. Add the line '5 * * * * python3 /home/crown/sensordata/parser.py' at the bottom
+        I. Default editor may be vi or vim, so to add the line:
+            i. Press shift+g
+            ii. Press o
+            iii. Insert line
+            iv. Press control+c
+            v. Press :wq
+            vi. If anything goes wrong, you can restart by pressing control+c and pressing :q!
+        II. Other text editors will be more intuitive to use
+
+

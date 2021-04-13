@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1 Farm and Farmers
+  script.
+     var farmfarmers = !{JSON.stringify(farmfarmers)};
+     console.log(farmfarmers)
+
+  table(class="table")
+    thead(class="thead-dark")
+      tr
+        th #
+        th FarmCode
+        th State
+        th Farmers
+    tbody
+      each farmfarmer in farmfarmers
+        tr
+          th= farmfarmer.id
+          th= farmfarmer.farmcode
+          th= farmfarmer.state
+          th
+            ul
+              for farmer in farmfarmer.Farmers
+                if farmer.FarmFarmer.is_active
+                  li(style=" color: green")= farmer.username
+                else
+                  li(style=" color: red")= farmer.username
+           
+            

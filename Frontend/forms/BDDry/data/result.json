@@ -1,0 +1,10 @@
+{
+  "errors": [
+    {
+      "message": "barcode does not have an answer."
+    },
+    {
+      "message": "sample_date does not have an answer."
+    }
+  ]
+}

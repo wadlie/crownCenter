@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+html,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: monospace;
+  line-height: 1.5;
+  background-color: #8d6e63;
+  padding-bottom: 16px;
+}
+
+.plot {
+  margin-top: 5vh;
+  width: 95%;
+}
+
+#donut {
+  margin: 16px auto;
+  width: 70%;
+  height: 50vh;
+}
+
+.primary-bg {
+  background-color: #f44336 !important;
+}
+
+.secondary.bg {
+  background-color: #8d6e63;
+}
+
+.message {
+  width: 100%;
+  background-color: #49ad0f;
+  color: white;
+  font-size: 1.2em;
+  border-top: 0.5em solid #73d337;
+  overflow-x: scroll;
+}
+
+.message > p {
+  padding: 2vw;
+}
+
+.error {
+  background-color: #c41a1a;
+  border-color: #ee3636;
+}
+
+.warning {
+  background-color: #f3d31e;
+  border-color: #fff2b2;
+}
+
+h3 {
+  font-size: 3em;
+}
+
+#message-container {
+  width: 100%;
+}
+
+.card .card-content {
+  padding: 12px !important;
+  word-wrap: break-word;
+}
+
+/*make a color different to fill-donut series*/
+
+.ct-chart-donut .ct-series-a .ct-slice-donut {
+  stroke: rgb(255, 255, 255);
+}
+
+/*make b hidden*/
+
+.ct-chart-donut .ct-series-b .ct-slice-donut {
+  stroke: #ffffff3a;
+}
+
+.wide {
+  width: 90vw;
+}
+.ct-grid {
+  stroke: rgba(255, 255, 255, 0.76) !important;
+}
+
+.ct-label {
+  color: rgba(255, 255, 255, 0.651) !important;
+}
+
+.ct-series-a .ct-point {
+  /* Colour of your points */
+  stroke: #fff;
+  /* Size of your points */
+  stroke-width: 2px;
+  /* Make your points appear as squares */
+  stroke-linecap: circle;
+}
+.ct-series-a .ct-bar,
+.ct-series-a .ct-line,
+.ct-series-a .ct-point,
+.ct-series-a .ct-slice-donut {
+  stroke: #fff;
+}
+
+.ct-series-b .ct-bar,
+.ct-series-b .ct-line,
+.ct-series-b .ct-point,
+.ct-series-b .ct-slice-donut {
+  stroke: #ffffffe5 !important;
+}
+
+.ct-bar {
+  stroke-width: 20px !important;
+}
+
+.ct-series-b .ct-point {
+  /* Size of your points */
+  stroke-width: 2px;
+  /* Make your points appear as squares */
+  stroke-linecap: circle;
+}
+
+.ct-zoom-rect {
+  fill: rgba(200, 100, 100, 0.3);
+  stroke: white;
+}

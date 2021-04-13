@@ -1,0 +1,8 @@
+{
+  "id": "BDPre",
+  "name": "BDPre",
+  "description": "Script for BDPre",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "soil-n",
+  "name": "Soil N",
+  "description": "Script for 'CROWN - Soil N'",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

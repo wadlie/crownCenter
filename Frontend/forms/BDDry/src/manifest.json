@@ -1,0 +1,8 @@
+{
+  "id": "BDDry",
+  "name": "Bulk Density Dry",
+  "description": "Script for BDDry",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

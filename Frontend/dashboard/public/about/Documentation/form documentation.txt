@@ -1,0 +1,30 @@
+1. Farmcode
+    a. This is where the user will input a farm code to get more information on the farm's submitted form.
+    b. The text field is case sensitive.
+    c. If there is no matching farm with the farm code, the Farm Percentage table will display 0% completed pie charts.
+    d. Any input that is not null in this section will automatically change the state of the section below from farms table to specific farm forms. More explanation of the two states in section 4.
+2. State
+    a. This is where the user will pick a state from a dropdown menu to filter by state.
+    b. After the user chooses a state, the forms in the Farm Percentage table will show only the farms that are operating in the selected state.
+3. Year
+    a. This is where the user will input a year in which a farm was operational.
+    b. The farms shown in the table will be the ones that have been operational in the specified year.
+    c. The format of the year must be in full form (i.e. 2019).
+4. Farm Percentage
+    a. There are two states to this section: the farms table and the specific farm forms.
+    b. Farms Table
+        I. This is a list of farms that meet the requirements from the filters specified by the user in the section above.
+        II. Clicking on the blue farm code button or inputting a farm code in the farm code filter will switch the state from Farms Table to Specific Farm Forms
+        III. The state specifies where the farm is operaional
+        IV. Year specifies which year the farm was active
+        V. Soil displays the percentage of the forms that have been filled out. If everything is filled out, there will be a green checkmark next to the 100%. Otherwise, there will be a red X.
+        VI. Biomass functions the same way as Soil (section 4.b.V) but for biomass forms.
+        VII. Bag functions the same way as Soil (section 4.b.V) but for bag forms.
+        VIII. Yield functions the same way as Soil (section 4.b.V) but for yield forms.
+    c. Specific Farm Forms
+        I. Displays the completion status of each form for a specific farm in the form of a pie chart.
+        II. Clicking on a pie chart will display all submissions for the section (i.e. soil).
+            i. Each submission will have a unique barcode that will contain the farm code of the farm.
+            ii. Any part of the form that does not have a null value will be displayed as a green check.
+            iii. Any part of the form that has a null value will be displayed as a red X.
+        III. While in this state, changing any of the filters besides the farm code will have no effect.

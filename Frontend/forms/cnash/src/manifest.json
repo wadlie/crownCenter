@@ -1,0 +1,8 @@
+{
+  "id": "cnash",
+  "name": "CNASH",
+  "description": "Script for 'CROWN - C_N_ASH'",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "soil-step",
+  "name": "Soil Step",
+  "description": "Script for 'CROWN - Soil Step #1'",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

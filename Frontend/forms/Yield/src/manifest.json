@@ -1,0 +1,8 @@
+{
+  "id": "yield",
+  "name": "Soil Yield",
+  "description": "Script for Soil Yield",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

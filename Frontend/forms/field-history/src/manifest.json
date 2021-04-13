@@ -1,0 +1,8 @@
+{
+  "id": "field-history",
+  "name": "Field History",
+  "description": "Script for CROWN - Field History",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

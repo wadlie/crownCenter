@@ -1,0 +1,64 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>CROWN - Bag DWT</h:title>
+    <model>
+      <instance>
+        <data id="build_CROWN-Bag-DWT_1557805824">
+          <meta>
+            <instanceID/>
+          </meta>
+          <barcode/>
+          <actual_recovery_date/>
+          <total_dwt/>
+          <Submit/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="English">
+          <text id="/data/barcode:label">
+            <value>Scan your bag's barcode</value>
+          </text>
+          <text id="/data/barcode:hint">
+            <value>Format: &quot;AAA 1 A1&quot;</value>
+          </text>
+          <text id="/data/actual_recovery_date:label">
+            <value>Date the bag was recovered</value>
+          </text>
+          <text id="/data/total_dwt:label">
+            <value>Enter the total DWT (g)</value>
+          </text>
+          <text id="/data/total_dwt:requiredMsg">
+            <value>Please provide answer in GRAMS.</value>
+          </text>
+          <text id="/data/Submit:label">
+            <value>Submit</value>
+          </text>
+          <text id="/data/Submit:hint">
+            <value>YOU MUST CLICK RUN TO SUBMIT INFORMATION;bag-dwt</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/barcode" type="barcode" required="true()"/>
+      <bind nodeset="/data/actual_recovery_date" type="date" required="true()"/>
+      <bind nodeset="/data/total_dwt" type="decimal" required="true()" jr:requiredMsg="jr:itext('/data/total_dwt:requiredMsg')"/>
+      <bind nodeset="/data/Submit" type="binary"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/barcode">
+      <label ref="jr:itext('/data/barcode:label')"/>
+      <hint ref="jr:itext('/data/barcode:hint')"/>
+    </input>
+    <input ref="/data/actual_recovery_date">
+      <label ref="jr:itext('/data/actual_recovery_date:label')"/>
+    </input>
+    <input ref="/data/total_dwt">
+      <label ref="jr:itext('/data/total_dwt:label')"/>
+    </input>
+    <upload ref="/data/Submit" mediatype="video/*">
+      <label ref="jr:itext('/data/Submit:label')"/>
+      <hint ref="jr:itext('/data/Submit:hint')"/>
+    </upload>
+  </h:body>
+</h:html>

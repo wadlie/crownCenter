@@ -1,0 +1,120 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>CROWN - Yield</h:title>
+    <model>
+      <instance>
+        <data id="build_CROWN-Yield_1557805455">
+          <meta>
+            <instanceID/>
+          </meta>
+          <barcode/>
+          <row_spacing/>
+          <grain_weight_per_ten_feet/>
+          <grain_moisture_one/>
+          <grain_moisture_two/>
+          <grain_test_weight_one/>
+          <grain_test_weight_two/>
+          <notes/>
+          <Submit/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="English">
+          <text id="/data/barcode:label">
+            <value>Scan Yield Barcode</value>
+          </text>
+          <text id="/data/barcode:hint">
+            <value>Format: &quot;A AAA A1-A1&quot;</value>
+          </text>
+          <text id="/data/row_spacing:label">
+            <value>Spacing between each row (ft)</value>
+          </text>
+          <text id="/data/row_spacing:hint">
+            <value>Please provide answer in FEET.</value>
+          </text>
+          <text id="/data/grain_weight_per_ten_feet:label">
+            <value>Weight of the grain for every 10 feet (lbs)</value>
+          </text>
+          <text id="/data/grain_weight_per_ten_feet:hint">
+            <value>Please provide answer in POUNDS.</value>
+          </text>
+          <text id="/data/grain_moisture_one:label">
+            <value>Grain moisture percent for 1:</value>
+          </text>
+          <text id="/data/grain_moisture_two:label">
+            <value>Grain moisture percent for 2:</value>
+          </text>
+          <text id="/data/grain_test_weight_one:label">
+            <value>Grain test weight for 1 (lbs/Bu)</value>
+          </text>
+          <text id="/data/grain_test_weight_one:hint">
+            <value>Please provide answer in POUNDS PER BUSHEL.</value>
+          </text>
+          <text id="/data/grain_test_weight_two:label">
+            <value>Grain test weight for 2 (lbs/Bu)</value>
+          </text>
+          <text id="/data/grain_test_weight_two:hint">
+            <value>Please provide answer in POUNDS PER BUSHEL.</value>
+          </text>
+          <text id="/data/notes:label">
+            <value>Additional Notes</value>
+          </text>
+          <text id="/data/Submit:label">
+            <value>Submit</value>
+          </text>
+          <text id="/data/Submit:hint">
+            <value>YOU MUST CLICK RUN TO SUBMIT INFORMATION;Yield</value>
+          </text>
+          <text id="/data/Submit:requiredMsg">
+            <value>You must click this button to submit the previous information.</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/barcode" type="barcode" required="true()"/>
+      <bind nodeset="/data/row_spacing" type="decimal" required="true()"/>
+      <bind nodeset="/data/grain_weight_per_ten_feet" type="decimal" required="true()"/>
+      <bind nodeset="/data/grain_moisture_one" type="decimal" required="true()"/>
+      <bind nodeset="/data/grain_moisture_two" type="decimal" required="true()"/>
+      <bind nodeset="/data/grain_test_weight_one" type="decimal" required="true()"/>
+      <bind nodeset="/data/grain_test_weight_two" type="decimal" required="true()"/>
+      <bind nodeset="/data/notes" type="string"/>
+      <bind nodeset="/data/Submit" type="binary" required="true()" jr:requiredMsg="jr:itext('/data/Submit:requiredMsg')"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/barcode">
+      <label ref="jr:itext('/data/barcode:label')"/>
+      <hint ref="jr:itext('/data/barcode:hint')"/>
+    </input>
+    <input ref="/data/row_spacing">
+      <label ref="jr:itext('/data/row_spacing:label')"/>
+      <hint ref="jr:itext('/data/row_spacing:hint')"/>
+    </input>
+    <input ref="/data/grain_weight_per_ten_feet">
+      <label ref="jr:itext('/data/grain_weight_per_ten_feet:label')"/>
+      <hint ref="jr:itext('/data/grain_weight_per_ten_feet:hint')"/>
+    </input>
+    <input ref="/data/grain_moisture_one">
+      <label ref="jr:itext('/data/grain_moisture_one:label')"/>
+    </input>
+    <input ref="/data/grain_moisture_two">
+      <label ref="jr:itext('/data/grain_moisture_two:label')"/>
+    </input>
+    <input ref="/data/grain_test_weight_one">
+      <label ref="jr:itext('/data/grain_test_weight_one:label')"/>
+      <hint ref="jr:itext('/data/grain_test_weight_one:hint')"/>
+    </input>
+    <input ref="/data/grain_test_weight_two">
+      <label ref="jr:itext('/data/grain_test_weight_two:label')"/>
+      <hint ref="jr:itext('/data/grain_test_weight_two:hint')"/>
+    </input>
+    <input ref="/data/notes">
+      <label ref="jr:itext('/data/notes:label')"/>
+    </input>
+    <upload ref="/data/Submit" mediatype="video/*">
+      <label ref="jr:itext('/data/Submit:label')"/>
+      <hint ref="jr:itext('/data/Submit:hint')"/>
+    </upload>
+  </h:body>
+</h:html>

@@ -1,0 +1,56 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>CROWN - StandCounts</h:title>
+    <model>
+      <instance>
+        <data id="build_CROWN-StandCounts_1557805440">
+          <meta>
+            <instanceID/>
+          </meta>
+          <barcode/>
+          <number_of_plants_per_ten_feet_long_row/>
+          <Submit/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="English">
+          <text id="/data/barcode:label">
+            <value>Scan Yield Barcode</value>
+          </text>
+          <text id="/data/barcode:hint">
+            <value>Format: &quot;&quot;A AAA A1-A1&quot;</value>
+          </text>
+          <text id="/data/number_of_plants_per_ten_feet_long_row:label">
+            <value>Number of plants per 10 foot Row</value>
+          </text>
+          <text id="/data/Submit:label">
+            <value>Submit</value>
+          </text>
+          <text id="/data/Submit:hint">
+            <value>YOU MUST CLICK RUN TO SUBMIT INFORMATION;stand-counts</value>
+          </text>
+          <text id="/data/Submit:requiredMsg">
+            <value>You must click this button to submit the previous information.</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/barcode" type="barcode" required="true()"/>
+      <bind nodeset="/data/number_of_plants_per_ten_feet_long_row" type="int" required="true()"/>
+      <bind nodeset="/data/Submit" type="binary" required="true()" jr:requiredMsg="jr:itext('/data/Submit:requiredMsg')"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/barcode">
+      <label ref="jr:itext('/data/barcode:label')"/>
+      <hint ref="jr:itext('/data/barcode:hint')"/>
+    </input>
+    <input ref="/data/number_of_plants_per_ten_feet_long_row">
+      <label ref="jr:itext('/data/number_of_plants_per_ten_feet_long_row:label')"/>
+    </input>
+    <upload ref="/data/Submit" mediatype="video/*">
+      <label ref="jr:itext('/data/Submit:label')"/>
+      <hint ref="jr:itext('/data/Submit:hint')"/>
+    </upload>
+  </h:body>
+</h:html>

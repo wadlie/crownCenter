@@ -1,0 +1,27 @@
+1. Last Updated Table
+    a. Each sensor will have a row containing which state and farm it is from and how long it has been since the last update
+    b. State
+        I. The two letter state code can be filtered through the text box
+        II. The filtering is case insensitive
+    c. Farm Code
+        I. The three letter farm code can also be filtered through the respective text box
+        II. The filtering is case insensitive
+    d. Hours Since Last Update
+        I. This signifies the last time the sensor has uploaded data to the database
+        II. Coloring
+            i. Green for updates under 1 hours
+            ii. Yellow for updates under 1.5 hours
+            iii. Red for upates over 2 hours
+2. Sensor Summary
+    a. Each sensor will have a row containing a brief summary of metrics
+    b. Metrics:
+        I. State: The state in which the sensor is operating in
+        II. Farm Code: The farm code that represents the farm that the sensor is operating in
+        III. Total # of Readings: Total readings that the sensor has made
+        IV. Total # of RH: Total readings of sensor data where a relative humidity was recorded
+        V. # of B Treatments: Total readings of sensor data for bareground treatment
+        VI. # of C Treatments: Total readings of sensor data for cover crop treatment
+        VII. Last RH: Latest timestamp for a record of sensor data where a relative humidity was recorded
+        VIII. Last B Treatment: Latest timestamp for a record of sensor data for bareground treatment
+        IX. Last C Treatment: Latest timestamp for a record of sensor data for cover crop treatment
+

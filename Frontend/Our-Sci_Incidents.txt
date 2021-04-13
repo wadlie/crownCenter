@@ -1,0 +1,4 @@
+Our-Sci Issue Requests
+
+1.) ODK build allows us to set contraints to questions that in theory should check a user's answers before proceeding to the next question. This would allow us
+to display an error message at the moment of the error rather than at the end. Our-Sci does not support this feature.

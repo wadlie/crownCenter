@@ -1,0 +1,8 @@
+{
+  "id": "soil-dry",
+  "name": "Soil Dry",
+  "description": "Script for 'CROWN - Soil Dry'",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

@@ -1,0 +1,93 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>CROWN - Soil N</h:title>
+    <model>
+      <instance>
+        <data id="build_CROWN-Soil-N_1557803230">
+          <meta>
+            <instanceID/>
+          </meta>
+          <barcode/>
+          <vial_number/>
+          <soil_dry_weight/>
+          <ammonium_content/>
+          <nitrate_content/>
+          <Submit/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="English">
+          <text id="/data/barcode:label">
+            <value>Barcode</value>
+          </text>
+          <text id="/data/barcode:hint">
+            <value>Format: &quot;S AAA A1 1&quot;</value>
+          </text>
+          <text id="/data/vial_number:label">
+            <value>Vial Number</value>
+          </text>
+          <text id="/data/vial_number:hint">
+            <value>Enter the vial identification number.</value>
+          </text>
+          <text id="/data/soil_dry_weight:label">
+            <value>Soil Dry Weight (g)</value>
+          </text>
+          <text id="/data/soil_dry_weight:hint">
+            <value>Please enter in GRAMS.</value>
+          </text>
+          <text id="/data/ammonium_content:label">
+            <value>NH4 Content (ppm)</value>
+          </text>
+          <text id="/data/ammonium_content:hint">
+            <value>Please enter in PARTS-PER-MILLION.</value>
+          </text>
+          <text id="/data/nitrate_content:label">
+            <value>NO3 Content (ppm)</value>
+          </text>
+          <text id="/data/nitrate_content:hint">
+            <value>Please enter in PARTS-PER-MILLION.</value>
+          </text>
+          <text id="/data/Submit:label">
+            <value>Submit</value>
+          </text>
+          <text id="/data/Submit:hint">
+            <value>YOU MUST CLICK RUN TO SUBMIT INFORMATION;soil-n</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/barcode" type="string" required="true()"/>
+      <bind nodeset="/data/vial_number" type="int" required="true()"/>
+      <bind nodeset="/data/soil_dry_weight" type="decimal" required="true()"/>
+      <bind nodeset="/data/ammonium_content" type="decimal" required="true()"/>
+      <bind nodeset="/data/nitrate_content" type="decimal" required="true()"/>
+      <bind nodeset="/data/Submit" type="binary" required="true()"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/barcode">
+      <label ref="jr:itext('/data/barcode:label')"/>
+      <hint ref="jr:itext('/data/barcode:hint')"/>
+    </input>
+    <input ref="/data/vial_number">
+      <label ref="jr:itext('/data/vial_number:label')"/>
+      <hint ref="jr:itext('/data/vial_number:hint')"/>
+    </input>
+    <input ref="/data/soil_dry_weight">
+      <label ref="jr:itext('/data/soil_dry_weight:label')"/>
+      <hint ref="jr:itext('/data/soil_dry_weight:hint')"/>
+    </input>
+    <input ref="/data/ammonium_content">
+      <label ref="jr:itext('/data/ammonium_content:label')"/>
+      <hint ref="jr:itext('/data/ammonium_content:hint')"/>
+    </input>
+    <input ref="/data/nitrate_content">
+      <label ref="jr:itext('/data/nitrate_content:label')"/>
+      <hint ref="jr:itext('/data/nitrate_content:hint')"/>
+    </input>
+    <upload ref="/data/Submit" mediatype="video/*">
+      <label ref="jr:itext('/data/Submit:label')"/>
+      <hint ref="jr:itext('/data/Submit:hint')"/>
+    </upload>
+  </h:body>
+</h:html>

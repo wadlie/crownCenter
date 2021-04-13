@@ -1,0 +1,11 @@
+{
+  "farmcode": "ABC",
+  "cover_crop_planting_date": "2019-06-20",
+  "planting_method": "Drilled",
+  "crop_species.cc_sp_1": "Unknown_Clover_spp",
+  "crop_species.cc_sp_1_rate": 55,
+  "crop_species.cc_sp_2": "Rape.Canola",
+  "crop_species.cc_sp_2_rate": 66,
+  "most_targeting_chemical": "2-4-D",
+  "additional_chemical_inputs": "Basagran Clopyralid Dicamba"
+}

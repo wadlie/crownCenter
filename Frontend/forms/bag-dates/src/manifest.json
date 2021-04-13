@@ -1,0 +1,8 @@
+{
+  "id": "bag-dates",
+  "name": "Bag Dates",
+  "description": "Script for CROWN - Bag Dates",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

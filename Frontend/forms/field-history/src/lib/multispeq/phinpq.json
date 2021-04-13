@@ -1,0 +1,17 @@
+[
+  {
+    "pulses": [20, 200, 20, 30, 10, 10, 10, 30, 20, 400, 150],
+    "act1_lights": [0, 20, 20, 20, 20, 20, 20, 20, 20, 11, 0],
+    "act_intensities": [0, -1, -1, 692, 614, 537, 460, 692, -1, 0, 0],
+    "cal_intensities": [4095, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "meas_intensities": [0, 0, 4095, 4095, 4095, 4095, 4095, 4095, 4095, 4095, 4095],
+    "detectors": [[34], [0], [34], [34], [34], [34], [34], [34], [34], [34], [34]],
+    "meas_lights": [[14], [0], [15], [15], [15], [15], [15], [15], [15], [0], [15]],
+    "environmental": [["light_intensity", 0], ["relative_humidity", 0], ["temperature", 0]],
+    "get_ir_baseline": [15, 14],
+    "act_background_light": 20,
+    "tcs_to_act": 100,
+    "pulsedistance": 10000,
+    "pulsesize": 10
+  }
+]

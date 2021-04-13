@@ -1,0 +1,8 @@
+{
+  "id": "SoilTex",
+  "name": "SoilTex",
+  "description": "Script for Soil Texture",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "bag-pre",
+  "name": "Bag Pre",
+  "description": "Don't use this in production",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

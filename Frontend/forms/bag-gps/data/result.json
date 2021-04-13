@@ -1,0 +1,10 @@
+{
+  "errors": [
+    {
+      "message": "Response returned with status code 400",
+      "data": {
+        "message": "farm not found"
+      }
+    }
+  ]
+}

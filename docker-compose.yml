@@ -1,0 +1,33 @@
+version: "2"
+
+services:
+    client:
+        image: crown-client
+        restart: always
+        ports:
+            - "5000:5000"
+        volumes:
+            - ./Frontend/dashboard:/client
+            - /client/node_modules
+#        links:
+#            - api
+        network_mode: host
+        # networks:
+        #     - webappnetwork
+
+    api:
+        image: crown-prod
+        restart: always
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./:/api
+            - /api/node_modules
+        network_mode: host
+        # networks:
+        #     - webappnetwork
+# networks: 
+#   webappnetwork:
+#     driver: bridge
+
+

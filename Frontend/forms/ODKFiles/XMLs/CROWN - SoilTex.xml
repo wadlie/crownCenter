@@ -1,0 +1,153 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>CROWN - SoilTex</h:title>
+    <model>
+      <instance>
+        <data id="build_CROWN-SoilTex_1557805406">
+          <meta>
+            <instanceID/>
+          </meta>
+          <barcode/>
+          <sand/>
+          <silt/>
+          <clay/>
+          <textural_class/>
+          <notes/>
+          <Submit/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="English">
+          <text id="/data/barcode:label">
+            <value>Scan Soil Barcode</value>
+          </text>
+          <text id="/data/barcode:hint">
+            <value>Format: &quot;S AAA A1 1&quot;</value>
+          </text>
+          <text id="/data/sand:label">
+            <value>Amount of sand in sample (g)</value>
+          </text>
+          <text id="/data/sand:hint">
+            <value>Please provide answer in GRAMS.</value>
+          </text>
+          <text id="/data/silt:label">
+            <value>Amount of silt in sample (g)</value>
+          </text>
+          <text id="/data/silt:hint">
+            <value>Please provide answer in GRAMS.</value>
+          </text>
+          <text id="/data/clay:label">
+            <value>Amount of clay in sample (g)</value>
+          </text>
+          <text id="/data/clay:hint">
+            <value>Please provide answer in GRAMS.</value>
+          </text>
+          <text id="/data/textural_class:label">
+            <value>Textural Class</value>
+          </text>
+          <text id="/data/textural_class:hint">
+            <value>Please choose one of the following:</value>
+          </text>
+          <text id="/data/textural_class:option0">
+            <value>Sandy</value>
+          </text>
+          <text id="/data/textural_class:option1">
+            <value>Sandy Loam</value>
+          </text>
+          <text id="/data/textural_class:option2">
+            <value>Loam</value>
+          </text>
+          <text id="/data/textural_class:option3">
+            <value>Silty Loam</value>
+          </text>
+          <text id="/data/textural_class:option4">
+            <value>Clay Loam</value>
+          </text>
+          <text id="/data/textural_class:option5">
+            <value>Clay</value>
+          </text>
+          <text id="/data/textural_class:option6">
+            <value>Heavy Clay</value>
+          </text>
+          <text id="/data/notes:label">
+            <value>Additional Notes</value>
+          </text>
+          <text id="/data/Submit:label">
+            <value>Submit</value>
+          </text>
+          <text id="/data/Submit:hint">
+            <value>YOU MUST CLICK RUN TO SUBMIT INFORMATION;SoilTex</value>
+          </text>
+          <text id="/data/Submit:requiredMsg">
+            <value>You must click this button to submit the previous information.</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/barcode" type="barcode" required="true()"/>
+      <bind nodeset="/data/sand" type="decimal" required="true()"/>
+      <bind nodeset="/data/silt" type="decimal" required="true()"/>
+      <bind nodeset="/data/clay" type="decimal" required="true()"/>
+      <bind nodeset="/data/textural_class" type="select1" required="true()"/>
+      <bind nodeset="/data/notes" type="string"/>
+      <bind nodeset="/data/Submit" type="binary" required="true()" jr:requiredMsg="jr:itext('/data/Submit:requiredMsg')"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/barcode">
+      <label ref="jr:itext('/data/barcode:label')"/>
+      <hint ref="jr:itext('/data/barcode:hint')"/>
+    </input>
+    <input ref="/data/sand">
+      <label ref="jr:itext('/data/sand:label')"/>
+      <hint ref="jr:itext('/data/sand:hint')"/>
+    </input>
+    <input ref="/data/silt">
+      <label ref="jr:itext('/data/silt:label')"/>
+      <hint ref="jr:itext('/data/silt:hint')"/>
+    </input>
+    <input ref="/data/clay">
+      <label ref="jr:itext('/data/clay:label')"/>
+      <hint ref="jr:itext('/data/clay:hint')"/>
+    </input>
+    <select1 ref="/data/textural_class">
+      <label ref="jr:itext('/data/textural_class:label')"/>
+      <hint ref="jr:itext('/data/textural_class:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/textural_class:option0')"/>
+        <value>sandy</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/textural_class:option1')"/>
+        <value>sandy_loam</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/textural_class:option2')"/>
+        <value>loam</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/textural_class:option3')"/>
+        <value>silty_loam</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/textural_class:option4')"/>
+        <value>clay_loam</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/textural_class:option5')"/>
+        <value>clay</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/textural_class:option6')"/>
+        <value>heavy_clay</value>
+      </item>
+    </select1>
+    <input ref="/data/notes">
+      <label ref="jr:itext('/data/notes:label')"/>
+    </input>
+    <upload ref="/data/Submit" mediatype="video/*">
+      <label ref="jr:itext('/data/Submit:label')"/>
+      <hint ref="jr:itext('/data/Submit:hint')"/>
+    </upload>
+  </h:body>
+</h:html>

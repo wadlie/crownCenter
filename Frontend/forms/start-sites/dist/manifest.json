@@ -1,0 +1,8 @@
+{
+  "id": "start-sites",
+  "name": "Start Sites",
+  "description": "Script for CROWN - Start Sites",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

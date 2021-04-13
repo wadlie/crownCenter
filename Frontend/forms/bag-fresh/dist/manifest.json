@@ -1,0 +1,8 @@
+{
+  "id": "bag-fresh",
+  "name": "Bag Fresh",
+  "description": "Don't use this in production",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

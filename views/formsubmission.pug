@@ -1,0 +1,61 @@
+extends layout
+    
+block content
+    h1= title
+    table(class="table")
+        thead(class="thead-dark")
+            tr
+                th #
+                th Type
+                th Date
+                th FarmCode
+                th FormId
+        tbody
+            each form in forms
+                tr
+                    th= form.id
+                    if form.FormBag
+                        th Bag
+                        th= form.createdAt
+                        th= form.farmcode
+                        th= form.FormBag.id
+                    else if form.FormBiomass
+                        th Biomass
+                        th= form.createdAt
+                        th= form.farmcode
+                        th= form.FormBiomass.id
+                    else if form.FormBulkDensity
+                        th BulkDensity
+                        th= form.createdAt
+                        th= form.FormBulkDensity.id 
+                    else if form.FormFieldHistory
+                        th FieldHistory
+                        th= form.createdAt
+                        th= form.farmcode
+                        th= form.FormFieldHistory.id 
+                    else if form.FormType
+                        th FormType
+                        th= form.createdAt
+                        th= form.farmcode
+                        th= form.FormType.id 
+                    else if form.FormYield
+                        th FormYield
+                        th= form.createdAt
+                        th= form.farmcode
+                        th= form.FormYield.id 
+                    else if form.FormSoil
+                        th FormSoil
+                        th= form.createdAt
+                        th= form.farmcode
+                        th= form.FormSoil.id
+                    else
+                        th Missing
+                        th= form.createdAt
+                        th= form.farmcode
+                        th= N/A
+           
+        //- each form in form.FormBag
+        //-     h3 hello
+
+        
+        

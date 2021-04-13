@@ -1,0 +1,44 @@
+{
+  "name": "dashboard",
+  "version": "0.1.0",
+  "proxy": "http://localhost:3000/",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "chart.js": "^2.8.0",
+    "leaflet": "^1.4.0",
+    "pg": "^7.10.0",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.6",
+    "react-bootstrap-table": "^4.3.1",
+    "react-bootstrap-table-next": "^3.1.1",
+    "react-bootstrap-table2-filter": "^1.1.9",
+    "react-bootstrap-table2-paginator": "^2.0.6",
+    "react-chartjs-2": "^2.7.6",
+    "react-dom": "^16.8.6",
+    "react-leaflet": "^2.2.1",
+    "react-markdown": "^4.0.8",
+    "react-scripts": "2.1.8",
+    "socket.io-client": "^2.2.0"
+  },
+  "scripts": {
+    "start": "PORT=5001 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.2.0"
+  }
+}

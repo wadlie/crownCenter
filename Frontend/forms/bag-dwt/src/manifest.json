@@ -1,0 +1,8 @@
+{
+  "id": "bag-dwt",
+  "name": "Bag DWT",
+  "description": "Script for 'CROWN - Bag DWT",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

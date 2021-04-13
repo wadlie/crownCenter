@@ -1,0 +1,25 @@
+1. Farmcode
+    a. This is where the user will input a farm code to focus the map on the pinpoint containing the farmcode
+    b. If the farmcode does not exist in the database, nothing will happen
+2. Map Features
+    a. The map is interactive, so the user can traverse the map by dragging their mouse
+    b. Each pinpoint will have a set of information that will pop up when clicked
+        I. Farm Code: The farm's respective 3 digit farm code
+        II. Year: The year that they are or were active
+        III. State: The state in which the farm operates in
+        IV. Soil: What percentage of soil forms the farm has completed
+        V. Biomass: What percentage of biomass forms the farm has completed
+        VI. Bag: What percentage of bag forms the farm has completed
+        VII. Yield: What percentage of yield forms the farm has completed
+        VIII. Notes: Any miscellaneous notes that the farm owners wish to display
+        IX. Google Map: Links to the address of the farm through Google Maps
+3. Error Log Features
+    a. Displays any errors that may come through technician input or sensor data input
+    b. Format is as follows:
+        I. (Date) farmcode: (FarmCode) (Name of Error) with message: (Message)
+4. Farms Features
+    a. Displays all farms with their respective state and year as tags
+    b. Clicking on the farm name will focus map on the specific farm
+    c. Farmer dropdown menu associated with every farm will display each farmer on the farm
+        I. Clicking on the farmer will create a modal that contains the farmer name, email, and phone number
+

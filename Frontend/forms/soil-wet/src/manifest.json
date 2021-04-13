@@ -1,0 +1,8 @@
+{
+  "id": "soil-wet",
+  "name": "Soil Wet",
+  "description": "Script for 'CROWN - Soil Wet'",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

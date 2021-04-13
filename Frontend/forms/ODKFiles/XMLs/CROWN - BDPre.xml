@@ -1,0 +1,60 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>CROWN - BDPre</h:title>
+    <model>
+      <instance>
+        <data id="build_CROWN-BDPre_1557805391">
+          <meta>
+            <instanceID/>
+          </meta>
+          <barcode/>
+          <bag_pre_weight/>
+          <Submit/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="English">
+          <text id="/data/barcode:label">
+            <value>Scan Bulk Density Barcode</value>
+          </text>
+          <text id="/data/barcode:hint">
+            <value>Format: &quot;AA AAA A A&quot;</value>
+          </text>
+          <text id="/data/bag_pre_weight:label">
+            <value>Bag Pre Weight (g)</value>
+          </text>
+          <text id="/data/bag_pre_weight:hint">
+            <value>Please provide answer in GRAMS.</value>
+          </text>
+          <text id="/data/Submit:label">
+            <value>Submit</value>
+          </text>
+          <text id="/data/Submit:hint">
+            <value>YOU MUST CLICK RUN TO SUBMIT INFORMATION;BDPre</value>
+          </text>
+          <text id="/data/Submit:requiredMsg">
+            <value>You must click this button to submit the previous information.</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/barcode" type="barcode" required="true()"/>
+      <bind nodeset="/data/bag_pre_weight" type="decimal" required="true()"/>
+      <bind nodeset="/data/Submit" type="binary" required="true()" jr:requiredMsg="jr:itext('/data/Submit:requiredMsg')"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/barcode">
+      <label ref="jr:itext('/data/barcode:label')"/>
+      <hint ref="jr:itext('/data/barcode:hint')"/>
+    </input>
+    <input ref="/data/bag_pre_weight">
+      <label ref="jr:itext('/data/bag_pre_weight:label')"/>
+      <hint ref="jr:itext('/data/bag_pre_weight:hint')"/>
+    </input>
+    <upload ref="/data/Submit" mediatype="video/*">
+      <label ref="jr:itext('/data/Submit:label')"/>
+      <hint ref="jr:itext('/data/Submit:hint')"/>
+    </upload>
+  </h:body>
+</h:html>

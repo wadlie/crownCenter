@@ -1,0 +1,227 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>CROWN - Soil Step #1</h:title>
+    <model>
+      <instance>
+        <data id="build_CROWN-Soil-Step-1_1557803815">
+          <meta>
+            <instanceID/>
+          </meta>
+          <farmcode/>
+          <season/>
+          <treatment/>
+          <subplot/>
+          <subsample/>
+          <total_sample_length/>
+          <depth_one/>
+          <depth_two/>
+          <depth_three/>
+          <gps_coordinates/>
+          <notes/>
+          <submit/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="English">
+          <text id="/data/farmcode:label">
+            <value>Enter Farm Code</value>
+          </text>
+          <text id="/data/farmcode:hint">
+            <value>Enter your three-letter farm code (e.g. AAA)</value>
+          </text>
+          <text id="/data/season:label">
+            <value>Season</value>
+          </text>
+          <text id="/data/season:hint">
+            <value>When the treatment was done.</value>
+          </text>
+          <text id="/data/season:option0">
+            <value>Spring</value>
+          </text>
+          <text id="/data/season:option1">
+            <value>Fall</value>
+          </text>
+          <text id="/data/treatment:label">
+            <value>Treatment</value>
+          </text>
+          <text id="/data/treatment:hint">
+            <value>If the plot had cover crops or was bareground.</value>
+          </text>
+          <text id="/data/treatment:option0">
+            <value>Bareground</value>
+          </text>
+          <text id="/data/treatment:option1">
+            <value>Cover Crop</value>
+          </text>
+          <text id="/data/subplot:label">
+            <value>Subplot</value>
+          </text>
+          <text id="/data/subplot:hint">
+            <value>Select a single number that refers to the subplot.</value>
+          </text>
+          <text id="/data/subplot:option0">
+            <value>1</value>
+          </text>
+          <text id="/data/subplot:option1">
+            <value>2</value>
+          </text>
+          <text id="/data/subsample:label">
+            <value>Subsample</value>
+          </text>
+          <text id="/data/subsample:hint">
+            <value>Select a single number that refers to the sample number of the core.</value>
+          </text>
+          <text id="/data/subsample:option0">
+            <value>1</value>
+          </text>
+          <text id="/data/subsample:option1">
+            <value>2</value>
+          </text>
+          <text id="/data/subsample:option2">
+            <value>3</value>
+          </text>
+          <text id="/data/subsample:option3">
+            <value>4</value>
+          </text>
+          <text id="/data/total_sample_length:label">
+            <value>Total Sample Length (cm)</value>
+          </text>
+          <text id="/data/total_sample_length:hint">
+            <value>Please enter in CENTIMETERS.</value>
+          </text>
+          <text id="/data/depth_one:label">
+            <value>Depth of First Cut (cm)</value>
+          </text>
+          <text id="/data/depth_one:hint">
+            <value>Please enter in CENTIMETERS.</value>
+          </text>
+          <text id="/data/depth_two:label">
+            <value>Depth of Second Cut (cm)</value>
+          </text>
+          <text id="/data/depth_two:hint">
+            <value>Please enter in CENTIMETERS.</value>
+          </text>
+          <text id="/data/depth_three:label">
+            <value>Depth of Third Cut (cm)</value>
+          </text>
+          <text id="/data/depth_three:hint">
+            <value>Please enter in CENTIMETERS.</value>
+          </text>
+          <text id="/data/gps_coordinates:label">
+            <value>GPS Co-ordinates</value>
+          </text>
+          <text id="/data/notes:label">
+            <value>Notes</value>
+          </text>
+          <text id="/data/submit:label">
+            <value>Submit</value>
+          </text>
+          <text id="/data/submit:hint">
+            <value>YOU MUST CLICK RUN TO SUBMIT INFORMATION;soil-step</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/farmcode" type="string" required="true()"/>
+      <bind nodeset="/data/season" type="select1" required="true()"/>
+      <bind nodeset="/data/treatment" type="select1" required="true()"/>
+      <bind nodeset="/data/subplot" type="select1" required="true()"/>
+      <bind nodeset="/data/subsample" type="select1" required="true()"/>
+      <bind nodeset="/data/total_sample_length" type="decimal" required="true()"/>
+      <bind nodeset="/data/depth_one" type="decimal" required="true()"/>
+      <bind nodeset="/data/depth_two" type="decimal" required="true()"/>
+      <bind nodeset="/data/depth_three" type="decimal" required="true()"/>
+      <bind nodeset="/data/gps_coordinates" type="geopoint" required="true()"/>
+      <bind nodeset="/data/notes" type="string"/>
+      <bind nodeset="/data/submit" type="binary" required="true()"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/farmcode">
+      <label ref="jr:itext('/data/farmcode:label')"/>
+      <hint ref="jr:itext('/data/farmcode:hint')"/>
+    </input>
+    <select1 ref="/data/season">
+      <label ref="jr:itext('/data/season:label')"/>
+      <hint ref="jr:itext('/data/season:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/season:option0')"/>
+        <value>S</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/season:option1')"/>
+        <value>FS</value>
+      </item>
+    </select1>
+    <select1 ref="/data/treatment">
+      <label ref="jr:itext('/data/treatment:label')"/>
+      <hint ref="jr:itext('/data/treatment:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/treatment:option0')"/>
+        <value>B</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/treatment:option1')"/>
+        <value>C</value>
+      </item>
+    </select1>
+    <select1 ref="/data/subplot">
+      <label ref="jr:itext('/data/subplot:label')"/>
+      <hint ref="jr:itext('/data/subplot:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/subplot:option0')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/subplot:option1')"/>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/data/subsample">
+      <label ref="jr:itext('/data/subsample:label')"/>
+      <hint ref="jr:itext('/data/subsample:hint')"/>
+      <item>
+        <label ref="jr:itext('/data/subsample:option0')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/subsample:option1')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/subsample:option2')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/subsample:option3')"/>
+        <value>4</value>
+      </item>
+    </select1>
+    <input ref="/data/total_sample_length">
+      <label ref="jr:itext('/data/total_sample_length:label')"/>
+      <hint ref="jr:itext('/data/total_sample_length:hint')"/>
+    </input>
+    <input ref="/data/depth_one">
+      <label ref="jr:itext('/data/depth_one:label')"/>
+      <hint ref="jr:itext('/data/depth_one:hint')"/>
+    </input>
+    <input ref="/data/depth_two">
+      <label ref="jr:itext('/data/depth_two:label')"/>
+      <hint ref="jr:itext('/data/depth_two:hint')"/>
+    </input>
+    <input ref="/data/depth_three">
+      <label ref="jr:itext('/data/depth_three:label')"/>
+      <hint ref="jr:itext('/data/depth_three:hint')"/>
+    </input>
+    <input ref="/data/gps_coordinates">
+      <label ref="jr:itext('/data/gps_coordinates:label')"/>
+    </input>
+    <input ref="/data/notes">
+      <label ref="jr:itext('/data/notes:label')"/>
+    </input>
+    <upload ref="/data/submit" mediatype="video/*">
+      <label ref="jr:itext('/data/submit:label')"/>
+      <hint ref="jr:itext('/data/submit:hint')"/>
+    </upload>
+  </h:body>
+</h:html>

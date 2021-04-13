@@ -1,0 +1,8 @@
+{
+  "id": "stand-counts",
+  "name": "Stand Counts",
+  "description": "Script for Stand Counts",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "biomassinfield",
+  "name": "BiomassINFIELD",
+  "description": "Script for CROWN - BiomassINFIELD",
+  "version": "1.0",
+  "action": "Run",
+  "requireDevice": "false"
+}

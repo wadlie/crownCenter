@@ -1,0 +1,13 @@
+{
+  "farmcode": "TRU",
+  "season": "S",
+  "treatment": "B",
+  "subplot": 1,
+  "subsample": 2,
+  "total_sample_length": 22,
+  "depth_one": 1,
+  "depth_two": 32,
+  "depth_three": 73,
+  "gps_coordinates": "1.2921, 36.8219",
+  "notes": "testing new promise setup"
+}
